@@ -1,0 +1,46 @@
+body {
+  background-color: rgb(241, 241, 241);
+  margin-top: 100px;
+}
+
+.main {
+  display: grid;
+  justify-content: center;
+}
+.ui.menu {
+  background-color: rgb(102, 153, 255);
+}
+
+.ui.card .cardAction {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui.card .subItem {
+  width: fit-content;
+  background-color: rgb(102, 153, 255);
+  border-radius: 15px;
+  color: white;
+  padding: 8px;
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge {
+  background-color: white;
+  margin: 3px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.ui.menu logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+}
