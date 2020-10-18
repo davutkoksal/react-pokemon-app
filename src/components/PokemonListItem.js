@@ -59,18 +59,18 @@ export default function PokemonListItem(props) {
             ui={false}
             wrapped
             src={
-              selectedPokemon?.sprites && selectedPokemon?.sprites.front_default
+              selectedPokemon?.sprites && selectedPokemon.sprites.front_default
             }
           />
           <Card.Header>
             {selectedPokemon?.name && selectedPokemon.name.toUpperCase()}
           </Card.Header>
           <Card.Description className="subItem">
-            Base Experience:{selectedPokemon?.base_experience}
+            Base Experience:{selectedPokemon.base_experience}
           </Card.Description>
 
           <Card.Description className="subItem">
-            Moves:{selectedPokemon.moves && selectedPokemon?.moves.length}
+            Moves:{selectedPokemon.moves && selectedPokemon.moves.length}
           </Card.Description>
 
           <Card.Description className="subItem">
@@ -79,9 +79,9 @@ export default function PokemonListItem(props) {
               content={
                 <List divided>
                   {selectedPokemon.abilities &&
-                    selectedPokemon?.abilities.map((el) => (
-                      <List.Item key={el.ability?.name}>
-                        {el.ability?.name}
+                    selectedPokemon.abilities.map((el) => (
+                      <List.Item key={el.ability.name}>
+                        {el.ability.name}
                       </List.Item>
                     ))}
                 </List>
@@ -95,9 +95,9 @@ export default function PokemonListItem(props) {
               content={
                 <List divided>
                   {selectedPokemon.stats &&
-                    selectedPokemon?.stats.map((el) => (
-                      <List.Item key={el.stat?.name}>
-                        {el.stat?.name}: {el.base_stat}
+                    selectedPokemon.stats.map((el) => (
+                      <List.Item key={el.stat.name}>
+                        {el.stat.name}: {el.base_stat}
                       </List.Item>
                     ))}
                 </List>
@@ -108,9 +108,9 @@ export default function PokemonListItem(props) {
           <Card.Description className="subItem">
             Types
             {selectedPokemon.types &&
-              selectedPokemon?.types.map((el) => (
-                <span className="badge" key={el.type?.name}>
-                  {el.type?.name}
+              selectedPokemon.types.map((el) => (
+                <span className="badge" key={el.type.name}>
+                  {el.type.name}
                 </span>
               ))}
           </Card.Description>

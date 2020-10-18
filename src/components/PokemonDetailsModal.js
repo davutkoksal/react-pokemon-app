@@ -29,17 +29,17 @@ export default function PokemonDetailsModal({
                   wrapped
                   src={
                     selectedPokemon.sprites &&
-                    selectedPokemon?.sprites.front_default
+                    selectedPokemon.sprites.front_default
                   }
                 />
                 <Card.Description>
-                  Base Experience:{selectedPokemon?.base_experience}
+                  Base Experience:{selectedPokemon.base_experience}
                 </Card.Description>
                 <Card.Description>
-                  Weight:{selectedPokemon?.weight}
+                  Weight:{selectedPokemon.weight}
                 </Card.Description>
                 <Card.Description>
-                  Height:{selectedPokemon?.height}
+                  Height:{selectedPokemon.height}
                 </Card.Description>
               </Card.Content>
             </Card>
@@ -52,9 +52,9 @@ export default function PokemonDetailsModal({
               <Card.Content>
                 <List divided>
                   {selectedPokemon.stats &&
-                    selectedPokemon?.stats.map((el) => (
-                      <List.Item key={el.stat?.name}>
-                        {el.stat?.name}: {el.base_stat}
+                    selectedPokemon.stats.map((el) => (
+                      <List.Item key={el.stat.name}>
+                        {el.stat.name}: {el.base_stat}
                       </List.Item>
                     ))}
                 </List>
@@ -69,9 +69,9 @@ export default function PokemonDetailsModal({
               <Card.Content>
                 <List divided>
                   {selectedPokemon.abilities &&
-                    selectedPokemon?.abilities.map((el) => (
-                      <List.Item key={el.ability?.name}>
-                        {el.ability?.name}
+                    selectedPokemon.abilities.map((el) => (
+                      <List.Item key={el.ability.name}>
+                        {el.ability.name}
                       </List.Item>
                     ))}
                 </List>
@@ -82,14 +82,14 @@ export default function PokemonDetailsModal({
             <Card>
               <Card.Content textAlign="center">
                 <Card.Header>
-                  Moves ({selectedPokemon.moves?.length})
+                  Moves ({selectedPokemon.moves.length})
                 </Card.Header>
               </Card.Content>
               <Card.Content>
                 <List divided>
                   {selectedPokemon.moves &&
-                    selectedPokemon?.moves.map((el) => (
-                      <List.Item key={el.move?.name}>{el.move?.name}</List.Item>
+                    selectedPokemon.moves.map((el) => (
+                      <List.Item key={el.move.name}>{el.move.name}</List.Item>
                     ))}
                 </List>
               </Card.Content>
