@@ -33,7 +33,7 @@ export default function PokemonListItem(props) {
     } else {
       setSelectedPokemon(pokemon);
     }
-  }, [fetchPokemon, pokemon, myPokemonsList]);
+  }, [fetchPokemon, pokemon]);
 
   const handleShowModal = () => {
     setShowModal((pre) => !pre);
@@ -130,7 +130,7 @@ export default function PokemonListItem(props) {
               fluid
               icon="add"
               content="Add To My Pokemons"
-              color="red"
+              primary
             />
           )}
         </Card.Content>
